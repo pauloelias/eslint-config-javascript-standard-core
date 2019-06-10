@@ -12,7 +12,7 @@ This package is heavily inspired by [Wes Bos's `No-Sweat™ Eslint and Prettier 
 - Fixes formatting errors with Prettier
 - Lints + Fixes JavasScipt via [eslint-config-standard](https://github.com/standard/eslint-config-standard)
 
-Custom rules can be [found here](.eslintrc.js). You can overwrite any of these settings or fork the entire thing to create your own.
+Custom rules can be [found in the `.eslintrc.js` file.](.eslintrc.js) You can overwrite any of these settings or fork the entire thing to create your own.
 
 ## Installing
 
