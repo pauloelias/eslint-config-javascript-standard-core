@@ -33,7 +33,7 @@ yarn add --dev eslint prettier @pauloelias/eslint-config-javascript-standard-cor
 ```
 
 ```sh
-npm install --save-dev eslint @pauloelias/eslint-config-javascript-standard-core
+npm install --save-dev eslint prettier @pauloelias/eslint-config-javascript-standard-core
 ```
 
 3. Create an `.eslintrc` file in the root of your project (alongside your `package.json`) and add the following:
