@@ -1,0 +1,50 @@
+{
+  "name": "@pauloelias/eslint-config-javascript-standard-core",
+  "version": "0.0.1",
+  "description": "ESLint and Prettier config for JavaScript projects.",
+  "keywords": [
+    "javascript",
+    "ecmascript",
+    "eslint",
+    "eslintconfig",
+    "lint",
+    "config",
+    "prettier"
+  ],
+  "author": {
+    "email": "paulo@pauloelias.com",
+    "name": "Paulo Elias",
+    "url": "https://www.pauloelias.com/"
+  },
+  "homepage": "https://github.com/pauloelias/eslint-config-javascript-core",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pauloelias/eslint-config-javascript-core.git"
+  },
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=8.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "prettier": "^1.18.2"
+  },
+  "peerDependencies": {
+    "eslint": "^5",
+    "prettier": "^1"
+  }
+}
