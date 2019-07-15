@@ -18,5 +18,5 @@ module.exports = {
       }
     ]
   },
-  "plugins": ["prettier"]
+  "plugins": ["standard", "prettier"]
 }
