@@ -2,7 +2,7 @@
 
 These are the core packages and settings I use for ESLint and Prettier.
 
-They are a slightly opinionated and have been fine-tuned while working with [modern JavaScript](https://javascript.info) and [react](https://reactjs.org). This config can be easily extended to accomodate how you and/or your team work.
+They are a slightly opinionated and have been fine-tuned while working with [modern JavaScript](https://javascript.info). This config can be easily extended to accomodate how you and/or your team work.
 
 This package is heavily inspired by [Wes Bos's `No-Sweat™ Eslint and Prettier Setup`](https://github.com/wesbos/eslint-config-wesbos/)... hence the blatant rip-off of his documentation (thanks [Wes](https://twitter.com/wesbos)!).
 
