@@ -1,21 +1,21 @@
-# ESLint and Prettier Setup for JavaScript
+# An Opinionated ESLint and Prettier Setup for JavaScript
 
-These are the core packages and settings I use for ESLint and Prettier.
+These are the core packages and settings I use for linting and formatting JavaScript in my projects.
 
-They are a slightly opinionated and have been fine-tuned while working with [modern JavaScript](https://javascript.info). This config can be easily extended to accomodate how you and/or your team work.
+They rules are a slightly opinionated and have been fine-tuned while working with [modern JavaScript](https://javascript.info). This config can be easily extended to accommodate how you and/or your team work.
 
 This package is heavily inspired by [Wes Bos's `No-Sweat™ Eslint and Prettier Setup`](https://github.com/wesbos/eslint-config-wesbos/)... hence the blatant rip-off of his documentation (thanks [Wes](https://twitter.com/wesbos)!).
 
-## What it Does
+## ⚡️ What it Does
 
-- Lints JavaScript based on latest-ish standards
-- Fixes formatting errors with Prettier
+- Lints JavaScript based on latest-ish standards with [eslint](https://eslint.org/)
+- Fixes formatting mishaps with [Prettier](https://prettier.io/)
 - Lints + Fixes JavasSript inside of html script tags
-- Lints + Fixes JavasScipt via [eslint-config-standard](https://github.com/standard/eslint-config-standard)
+- Eslint rules based on [JavaScript Standard Style](https://standardjs.com/)
 
-Custom rules can be [found in the `.eslintrc.js` file.](.eslintrc.js) You can overwrite any of these settings or fork the entire thing to create your own.
+Custom rules can be [found in the `.eslintrc.js` file.](.eslintrc.js) You can overwrite any of these settings or fork the entire package to create your own.
 
-## Installing
+## 💾 Installing
 
 You can install this package locally (per project) or globally.
 
@@ -27,7 +27,7 @@ Installing this package globally allows you to lint and format ad-hoc JavaScript
 
 1. If you don't have a `package.json` file, initialize your project with `yarn init` or `npm init`
 
-2. Install the package and its peer dependencies:
+1. Install the package and its peer dependencies:
 
 ```sh
 yarn add --dev eslint prettier @pauloelias/eslint-config-javascript-standard-core
@@ -37,7 +37,13 @@ yarn add --dev eslint prettier @pauloelias/eslint-config-javascript-standard-cor
 npm install --save-dev eslint prettier @pauloelias/eslint-config-javascript-standard-core
 ```
 
-3. Create an `.eslintrc` file in the root of your project (alongside your `package.json`) and add the following:
+1. Create an `.eslintignore` file in the root of your project (alongside your `package.json`) and add the following:
+
+```====
+node_modules
+```
+
+1. Create an `.eslintrc` file in the root of your project (alongside your `package.json`) and add the following:
 
 ```json
 {
@@ -45,7 +51,7 @@ npm install --save-dev eslint prettier @pauloelias/eslint-config-javascript-stan
 }
 ```
 
-4. Add the follwing scripts to your `package.json` file:
+1. Add the follwing scripts to your `package.json` file:
 
 ```json
 "scripts": {
@@ -54,7 +60,7 @@ npm install --save-dev eslint prettier @pauloelias/eslint-config-javascript-stan
 }
 ```
 
-5. You can lint and/or fix your code manually by running these scripts:
+1. You can lint and/or fix your code manually by running these scripts:
 
 ```sh
 yarn run lint
@@ -78,7 +84,7 @@ yarn global add eslint prettier @pauloelias/eslint-config-javascript-standard-co
 npm install -g eslint prettier @pauloelias/eslint-config-javascript-standard-core
 ```
 
-2. Add a global `.eslintrc` file:
+1. Add a global `.eslintrc` file:
 
 ESLint will look for one in your home directory:
 
@@ -95,7 +101,7 @@ Your `.eslintrc` file should look like this:
 
 To use from the CLI, you can now run `eslint .` or configure your editor (below under "Settings").
 
-## Settings
+## ⚙️ Settings
 
 If you'd like to overwrite eslint or prettier settings, you can add the rules in your .eslintrc file. The ESLint rules go directly under "rules" while prettier options go under "prettier/prettier". Note that prettier rules overwrite anything in this config (removing semicolons, and using single quotes), so you'll need to include those as well.
 
@@ -106,8 +112,8 @@ If you'd like to overwrite eslint or prettier settings, you can add the rules in
     "prettier/prettier": [
       "error",
       {
-        "semi": false,
-        "singleQuote": true
+        "semi": true,
+        "singleQuote": false
       }
     ]
   }
@@ -118,10 +124,11 @@ If you'd like to overwrite eslint or prettier settings, you can add the rules in
 
 Once you have done one, or both, of the above installs. You probably want your editor to lint and fix issues for you. Here are the instructions for VS Code:
 
-1. Install the [ESLint package](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-2. Now we need to setup some VS Code settings via `Code/File` → `Preferences` → `Settings`. It's easier to enter these settings while editing the `settings.json` file, so click the `{}` icon in the top right corner:
+1. Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
-```
+1. Now we need to setup some VS Code settings via `Code/File` → `Preferences` → `Settings`. It's easier to enter these settings while editing the `settings.json` file, so click the `{}` icon in the top right corner:
+
+```json
 {
   // These are all my auto-save configs
   "editor.formatOnSave": true,
@@ -135,9 +142,9 @@ Once you have done one, or both, of the above installs. You probably want your e
   // tell the ESLint plugin to run on save
   "eslint.autoFixOnSave": true,
   // Optional BUT IMPORTANT: If you have the Prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
-  "prettier.disableLanguages": [
-    "javascript",
-    "javascriptreact"
-  ]
+  "prettier.disableLanguages": ["javascript", "javascriptreact"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
 ```
