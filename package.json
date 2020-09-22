@@ -1,7 +1,7 @@
 {
   "name": "@pauloelias/eslint-config-javascript-standard-core",
   "version": "2.1.0",
-  "description": "An opoinionate ESLint config for JavaScript projects.",
+  "description": "An opinionated ESLint config for JavaScript projects.",
   "keywords": [
     "javascript",
     "ecmascript",
