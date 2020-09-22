@@ -1,27 +1,15 @@
 module.exports = {
-  extends: ['standard', 'prettier'],
+  extends: ['standard'],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module'
   },
   env: {
-    amd: true,
     browser: true,
+    commonjs: true,
     node: true,
-    jquery: true,
     jest: true
   },
-  rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        printWidth: 80,
-        semi: false,
-        singleQuote: true,
-        trailingComma: 'none'
-      }
-    ]
-  },
-  plugins: ['html', 'prettier', 'standard']
+  plugins: ['html', 'standard']
 }
