@@ -1,7 +1,7 @@
 {
   "name": "@pauloelias/eslint-config-javascript-standard-core",
-  "version": "2.0.1",
-  "description": "ESLint and Prettier config for JavaScript projects.",
+  "version": "2.1.0",
+  "description": "An opoinionate ESLint config for JavaScript projects.",
   "keywords": [
     "javascript",
     "ecmascript",
@@ -9,7 +9,7 @@
     "eslintconfig",
     "lint",
     "config",
-    "prettier"
+    "standardjs"
   ],
   "author": {
     "email": "paulo@pauloelias.com",
@@ -35,31 +35,24 @@
   "dependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.9.0",
-    "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "prettier": "^2.1.2"
+    "eslint-plugin-standard": "^4.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.9.0",
-    "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "prettier": "^2.1.2"
+    "eslint-plugin-standard": "^4.0.1"
   },
   "peerDependencies": {
-    "eslint": "^7",
-    "prettier": "^2"
+    "eslint": "^7"
   }
 }
