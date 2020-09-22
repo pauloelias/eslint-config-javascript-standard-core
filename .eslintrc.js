@@ -1,6 +1,6 @@
 module.exports = {
-  plugins: ['html', 'import', 'node', 'promise', 'standard'],
-  extends: ['eslint:recommended', 'plugin:import/errors', 'plugin:import/warnings', 'plugin:node/recommended', 'plugin:promise/recommended', 'standard'],
+  plugins: ['html', 'prettier', 'standard'],
+  extends: ['standard', 'prettier', 'prettier/standard'],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2020,
@@ -10,9 +10,31 @@ module.exports = {
     }
   },
   rules: {
-    'no-debugger': 1,
+    'arrow-body-style': [2, 'as-needed'],
     'no-alert': 1,
-    quotes: [2, 'single', 'avoid-escape']
+    'no-console': 1,
+    'no-debugger': 1,
+    'no-unused-expressions': [
+      2,
+      {
+        allowTaggedTemplates: true
+      }
+    ],
+    'prefer-const': [
+      2,
+      {
+        destructuring: 'all'
+      }
+    ],
+    quotes: [2, 'single', 'avoid-escape'],
+    'prettier/prettier': [
+      'error',
+      {
+        trailingComma: 'none',
+        singleQuote: true,
+        printWidth: 80
+      }
+    ]
   },
   env: {
     browser: true,
@@ -21,4 +43,4 @@ module.exports = {
     jquery: true,
     node: true
   }
-}
+};
