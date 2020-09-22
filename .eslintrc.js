@@ -44,4 +44,4 @@ module.exports = {
     jquery: true,
     node: true
   }
-};
+}
