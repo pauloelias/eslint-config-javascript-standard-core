@@ -105,8 +105,22 @@ To use from the CLI, you can now run `eslint .` or configure your editor (below 
 ## ⚙️ Settings
 
 If you'd like to overwrite eslint or prettier settings, you can add the rules in your .eslintrc file. The ESLint rules go directly under "rules" while prettier options go under "prettier/prettier". Note that prettier rules overwrite anything in this config (removing semicolons, and using single quotes), so you'll need to include those as well.
+
 <!-- prettier-ignore -->
-    `json { "extends": ["@pauloelias/eslint-config-javascript-standard-core"], "rules": { "prettier/prettier": [ "error", { "semi": true, "singleQuote": false } ] } } `
+```js
+{
+  "extends": ["@pauloelias/eslint-config-javascript-standard-core"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "singleQuote": false
+      }
+    ]
+  }
+}
+```
 
 ### VS Code Settings
 
@@ -115,24 +129,24 @@ Once you have done one, or both, of the above installs. You probably want your e
 1. Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 1. Now we need to setup some VS Code settings via `Code/File` → `Preferences` → `Settings`. It's easier to enter these settings while editing the `settings.json` file, so click the `{}` icon in the top right corner:
-
-   ```json
-   {
-     // These are all my auto-save configs
-     "editor.formatOnSave": true,
-     // turn it off for JS and JSX, we will do this via eslint
-     "[javascript]": {
-       "editor.formatOnSave": false
-     },
-     "[javascriptreact]": {
-       "editor.formatOnSave": false
-     },
-     // tell the ESLint plugin to run on save
-     "eslint.autoFixOnSave": true,
-     // Optional BUT IMPORTANT: If you have the Prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
-     "prettier.disableLanguages": ["javascript", "javascriptreact"],
-     "editor.codeActionsOnSave": {
-       "source.fixAll.eslint": true
-     }
-   }
-   ```
+   <!-- prettier-ignore -->
+   ```js
+    {
+      // These are all my auto-save configs
+      "editor.formatOnSave": true,
+      // turn it off for JS and JSX, we will do this via eslint
+      "[javascript]": {
+        "editor.formatOnSave": false
+      },
+      "[javascriptreact]": {
+        "editor.formatOnSave": false
+      },
+      // tell the ESLint plugin to run on save
+      "eslint.autoFixOnSave": true,
+      // Optional BUT IMPORTANT: If you have the Prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
+      "prettier.disableLanguages": ["javascript", "javascriptreact"],
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+      }
+    }
+    ```
