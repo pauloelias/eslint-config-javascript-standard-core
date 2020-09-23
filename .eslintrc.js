@@ -1,6 +1,13 @@
 module.exports = {
-  plugins: ['html', 'prettier', 'standard'],
-  extends: ['standard', 'prettier', 'prettier/standard'],
+  plugins: ['html', 'import', 'prettier', 'standard'],
+  extends: [
+    'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'standard',
+    'prettier',
+    'prettier/standard'
+  ],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2020,
