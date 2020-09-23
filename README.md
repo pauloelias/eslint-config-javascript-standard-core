@@ -2,7 +2,7 @@
 
 These are the core packages and settings I use for linting and formatting JavaScript in my projects.
 
-They rules are a slightly opinionated and have been fine-tuned while working with [modern JavaScript](https://javascript.info). This config can be easily extended to accommodate how you and/or your team work.
+The rules are a opinionated and are bing continuously fine-tuned while working with [modern JavaScript](https://javascript.info). This config can be easily extended to accommodate how you and/or your team work though.
 
 This package is heavily inspired by [Wes Bos's `No-Sweat™ Eslint and Prettier Setup`](https://github.com/wesbos/eslint-config-wesbos/)... hence the blatant rip-off of his documentation (thanks [Wes](https://twitter.com/wesbos)!).
 
@@ -43,9 +43,15 @@ Installing this package globally allows you to lint and format ad-hoc JavaScript
     node_modules
     ```
 
+1.  Create a `.prettierignore` file in the root of your project (alongside your `package.json`) and add the following:
+    <!-- prettier-ignore -->
+    ```
+    node_modules
+    ```
+
 1.  Create an `.eslintrc` file in the root of your project (alongside your `package.json`) and add the following:
     <!-- prettier-ignore -->
-    ```json
+    ```js
     {
       "extends": ["@pauloelias/eslint-config-javascript-standard-core"]
     }
@@ -66,6 +72,7 @@ Installing this package globally allows you to lint and format ad-hoc JavaScript
     yarn run lint
     yarn run lint:fix
     ```
+
     <!-- prettier-ignore -->
     ```sh
     npm run lint
@@ -94,7 +101,7 @@ ESLint will look for one in your home directory:
 
 Your `.eslintrc` file should look like this:
 
-```json
+```js
 {
   "extends": ["@pauloelias/eslint-config-javascript-standard-core"]
 }
