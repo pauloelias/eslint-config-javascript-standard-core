@@ -10,7 +10,6 @@ This package is heavily inspired by [Wes Bos's `No-Sweat™ Eslint and Prettier 
 
 - Lints JavaScript based on latest-ish standards with [eslint](https://eslint.org/)
 - Fixes formatting mishaps with [Prettier](https://prettier.io/)
-- Lints + Fixes JavasSript inside of html script tags
 - Eslint rules based on [JavaScript Standard Style](https://standardjs.com/)
 
 Custom rules can be [found in the `.eslintrc.js` file.](.eslintrc.js) You can overwrite any of these settings or fork the entire package to create your own.
